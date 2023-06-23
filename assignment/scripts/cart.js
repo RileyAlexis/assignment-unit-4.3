@@ -35,7 +35,7 @@ function removeItem(item) {
 const index = basket.indexOf(item);
 let removedItem ='';
 
-if (index> -1) {removedItem = basket.splice(index,1)}
+if (index> -1) {removedItem = basket.splice(index,1); removedItem = removedItem.toString();}
 else return null;
 return removedItem;
 }
@@ -50,15 +50,15 @@ console.log('Adding Item(expect true)', addItem('cheesecake'));
 console.log('Adding Item(expect true)', addItem('donuts'));
 console.log('Adding Item(expect true)', addItem('danishes'));
 console.log('Adding Item(expect true)', addItem('chocolate bar'));
-console.log('Adding Item(expect true)', addItem('licorice'));
+//console.log('Adding Item(expect true)', addItem('licorice'));
 console.log('Remove Item(return that item if found)', removeItem('ice cream'));
 console.log('Remove non-existent item', removeItem('somethingsomething'));
 console.log(basket);
 
 console.log('List All Items', listItems());
 
-//console.log('Empty Cart', empty());
-console.log('List Items in Cart(expect undefined', listItems());
+console.log('Empty Cart', empty());
+console.log('List Items in Cart(expect undefined)', listItems());
 
 
 
